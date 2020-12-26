@@ -8,6 +8,7 @@ set(tests
     minimal_cider.cpp)
 
 add_executable(cider_test test.cpp ${tests})
+target_link_libraries(cider_test cppzmq)
 target_include_directories(cider_test PUBLIC ${CMAKE_CURRENT_BINARY_DIR})
 set_target_properties(cider_test PROPERTIES CXX_STANDARD 17)
 
