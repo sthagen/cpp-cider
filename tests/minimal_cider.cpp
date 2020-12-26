@@ -9,3 +9,11 @@ TEST_CASE("Minimal cider passes attempt to talk via zeromq", "[positive]") {
     bool const passed{true};
     REQUIRE(passed);
 }
+
+TEST_CASE("We use the expected zeromq version", "[positive]") {
+    int major, minor, patch;
+    zmq::version(&major, &minor, &patch);
+    CHECK(patch == 4);
+    CHECK(minor == 3);
+    REQUIRE(major == 4);
+}
