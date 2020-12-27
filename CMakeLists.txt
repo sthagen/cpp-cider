@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(CIDER VERSION 2020.12)
+project(cider VERSION 2020.12 LANGUAGES C CXX)
 
 option(CIDER_BUILD_EXAMPLES "whether or not to build the examples" ON)
 option(CIDER_BUILD_TESTS "whether or not to build the tests" ON)
